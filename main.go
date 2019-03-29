@@ -126,7 +126,7 @@ func main() {
 
 	var configDefaults = map[*string]string{
 		&config.ListenTo:         ":45221",
-        &config.DSN:              "root:pass@tcp(db:3306)/ripple",
+        &config.DSN:              "root:changeme@tcp(db:3306)/ripple",
         &config.AvatarURL:        "/avatars",
         &config.RedisAddress:     "redis:6379",
 		&config.CookieSecret:     rs.String(46),
