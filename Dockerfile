@@ -17,4 +17,10 @@ RUN mkdir ~/.config && touch ~/.config/ripple_license_agreed
 # Generate config
 RUN ./hanayo
 
-CMD ["./hanayo"]
+ENV DOMAIN test.test
+
+COPY ./entrypoint.sh .
+RUN chmod +x entrypoint.sh
+
+ENTRYPOINT [ "./entrypoint.sh" ]
+CMD [ "./hanayo" ]
