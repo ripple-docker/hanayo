@@ -1,4 +1,4 @@
-from golang
+FROM golang
 
 WORKDIR /go/src/zxq.co/ripple/hanayo
 COPY . .
@@ -10,5 +10,11 @@ FROM alpine
 WORKDIR /hanayo/
 COPY --from=0 /go/bin/hanayo ./
 COPY --from=0 /go/src/zxq.co/ripple/hanayo/ ./
+
+# Agree to License
+RUN mkdir ~/.config && touch ~/.config/ripple_license_agreed
+
+# Generate config
+RUN ./hanayo
 
 CMD ["./hanayo"]
