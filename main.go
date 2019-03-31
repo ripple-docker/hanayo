@@ -116,6 +116,7 @@ func main() {
                        AvatarURL:      "https://a.DOMAIN",
                        BaseURL:        "https://DOMAIN",
                        BanchoAPI:      "https://c.DOMAIN",
+					   DSN:            "root:MYSQL_ROOT_PASSWORD@tcp(db:3306)/ripple",
                        RedisEnable:    true,
                }, "hanayo.conf")
 		fmt.Println("The configuration file was not found. We created one for you.")
@@ -126,7 +127,6 @@ func main() {
 
 	var configDefaults = map[*string]string{
 		&config.ListenTo:         ":45221",
-        &config.DSN:              "root:changeme@tcp(db:3306)/ripple",
         &config.AvatarURL:        "/avatars",
         &config.RedisAddress:     "redis:6379",
 		&config.CookieSecret:     rs.String(46),

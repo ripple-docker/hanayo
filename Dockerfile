@@ -17,10 +17,11 @@ RUN mkdir ~/.config && touch ~/.config/ripple_license_agreed
 # Generate config
 RUN ./hanayo
 
-ENV DOMAIN test.test
-
 COPY ./entrypoint.sh .
 RUN chmod +x entrypoint.sh
+
+ENV DOMAIN test.test
+ENV MYSQL_ROOT_PASSWORD changeme
 
 ENTRYPOINT [ "./entrypoint.sh" ]
 CMD [ "./hanayo" ]
