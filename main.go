@@ -117,6 +117,7 @@ func main() {
                        BaseURL:        "https://DOMAIN",
                        BanchoAPI:      "https://c.DOMAIN",
 					   DSN:            "root:MYSQL_ROOT_PASSWORD@tcp(db:3306)/ripple",
+					   APISecret:      "APISECRETVALUE",
                        RedisEnable:    true,
                }, "hanayo.conf")
 		fmt.Println("The configuration file was not found. We created one for you.")
@@ -135,7 +136,6 @@ func main() {
 		&config.BanchoAPI:        "https://c.ripple.moe",
 		&config.CheesegullAPI:    "https://cheesegull/api",
 		&config.API:              "http://rippleapi:40001/api/v1/",
-		&config.APISecret:        "Potato",
 		&config.IP_API:           "https://ip.zxq.co",
 		&config.DiscordServer:    "#",
 		&config.MainRippleFolder: "/home/ripple/ripple",

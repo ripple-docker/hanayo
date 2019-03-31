@@ -2,4 +2,5 @@
 
 sed -i 's/DOMAIN/'"$DOMAIN"'/g' hanayo.conf
 sed -i 's/MYSQL_ROOT_PASSWORD/'"$MYSQL_ROOT_PASSWORD"'/g' hanayo.conf
+sed -i 's/APISECRETVALUE/'"$APISECRET"'/g' hanayo.conf
 exec "$@"

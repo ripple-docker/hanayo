@@ -22,6 +22,7 @@ RUN chmod +x entrypoint.sh
 
 ENV DOMAIN test.test
 ENV MYSQL_ROOT_PASSWORD changeme
+ENV APISECRET Potato
 
 ENTRYPOINT [ "./entrypoint.sh" ]
 CMD [ "./hanayo" ]
